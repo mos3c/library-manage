@@ -95,3 +95,8 @@ EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'sumityoyo')
 
 # Default auto field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+if os.getenv('RENDER'):
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config(default='sqlite:///db.sqlite3')
+    
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
