@@ -119,7 +119,12 @@ STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
+<<<<<<< HEAD
 LOGIN_REDIRECT_URL = '/afterlogin'
+=======
+LOGIN_REDIRECT_URL='/afterlogin'
+LOGOUT_REDIRECT_URL = '/'
+>>>>>>> e426713 (Updated project with recent changes)
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
